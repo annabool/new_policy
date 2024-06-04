@@ -1,0 +1,51 @@
+{
+    "built_in_policy": {
+        "GEN_Allowed_locations": {
+            "name": "GEN_Allowed locations2",
+            "display_name": "GEN_Allowed locations2",
+            "policy_definition_id": "/providers/Microsoft.Authorization/policyDefinitions/e56962a6-4747-49cd-b67b-bf8b01975c4c",
+            "not_scopes": [
+                "/subscriptions/4590de66-9d23-4f12-9f39-0a4aa5d8b42d/resourceGroups/we-ydev-msft-f5-rg"
+            ],
+            "description": "TEST_TEST",
+            "non_compliance_message": "POL_Allowed locations",
+            "parameters": {
+                "listOfAllowedLocations": {
+                    "value": [
+                        "West Europe"
+                    ]
+                }
+            }
+        },
+        "Azure_Synapse_Workspace_SQL_Server_should_be_running_TLS_version_1.2_or_newer": {
+            "name": "Synapse SQL TLS 1.2",
+            
+            "display_name": "SYN_Azure Synapse Workspace SQL Server should be running TLS version 1.2 or newer",
+            "policy_definition_id": "/providers/Microsoft.Authorization/policyDefinitions/cb3738a6-82a2-4a18-b87b-15217b9deff4",
+            "not_scopes": [],
+            "description" : "",
+            "non_compliance_message": "POL_Azure Synapse Workspace SQL Server should be running TLS version 1.2 or newer",
+            "parameters": {
+                "effect": {
+                    "value": "Deny"
+                }
+            }
+        },
+        "Synapse_managed_private_endpoints_should_only_connect_to_resources_in_approved_Azure_Active_Directory_tenants": {
+            "name": "Syn approved tenants",
+            "display_name": "SYN_Synapse managed private endpoints should only connect to resources in approved Azure Active Directory tenants",
+            "policy_definition_id": "/providers/Microsoft.Authorization/policyDefinitions/3a003702-13d2-4679-941b-937e58c443f0",
+            "not_scopes": [],
+            "description" : "",
+            "non_compliance_message": "POL_Synapse managed private endpoints should only connect to resources in approved Azure Active Directory tenants",
+            "parameters": {
+                "effect": {
+                    "value": "Deny"
+                },
+                "allowedTenantIds": {
+                    "value": ["ac32ce31-21bc-40f0-81ca-71c54057fde4"]
+                }
+            }
+        }
+    }
+}
